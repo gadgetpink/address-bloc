@@ -127,4 +127,16 @@ RSpec.describe AddressBook do
       expect(entry).to be_nil
     end
   end
+
+  context "#detonate" do
+    it "should delete all entries" do
+      book.add_entry("Diane Kulseth", "612.807.4951", "diane@diane.com")
+      book.add_entry("Diane Kulseth", "612.807.4951", "diane@diane.com")
+      book.add_entry("Diane Kulseth", "612.807.4951", "diane@diane.com")
+
+      book.detonate
+      expect(book.entries.size).to eq 0
+    end
+  end
+
 end

@@ -9,6 +9,10 @@ class AddressBook
     @entries = []
   end
 
+  def detonate
+    @entries = []
+  end
+
   def add_entry(name, phone, email)
 # #9 create a variable to store index value
     index = 0
